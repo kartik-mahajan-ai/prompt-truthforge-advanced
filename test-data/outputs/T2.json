@@ -1,0 +1,292 @@
+{
+ "test": "T2",
+ "type": "Normal",
+ "question": "what causes necrotizing fasciitis",
+ "expected": "Answer drawn from the documents; every kept sentence supported",
+ "response": {
+  "question": "what causes necrotizing fasciitis",
+  "answer": "Necrotizing fasciitis is primarily caused by group A Streptococcus bacteria, similar to those causing strep throat. However, other types of bacteria like Staphylococcus and others have also been linked to the disease. This condition typically occurs when these bacteria infect the superficial fascia, a layer",
+  "insufficient_evidence": false,
+  "message": null,
+  "draft": "Necrotizing fasciitis is primarily caused by group A Streptococcus bacteria, similar to those causing strep throat. However, other types of bacteria like Staphylococcus and others have also been linked to the disease. This condition typically occurs when these bacteria infect the superficial fascia, a layer",
+  "n_claims": 3,
+  "n_dropped": 0,
+  "sources": [
+   {
+    "citation": "doc_68.txt",
+    "chunk_id": "6cd803490e6b",
+    "text": "Causes of Necrotizing Fasciitis. Necrotizing fasciitis is commonly caused by group A Streptococcus (GAS) bacteria. That's the same type of bacteria that causes strep throat.However, several types of bacteria, such as staphylococcus and others, have also been associated with the disease.Necrotizing fasciitis occurs when such bacteria infect the superficial fascia, a layer of connective tissue below the skin.owever, several types of bacteria, such as staphylococcus and others, have also been associated with the disease. Necrotizing fasciitis occurs when such bacteria infect the superficial fascia, a layer of connective tissue below the skin.",
+    "score": 16.28
+   },
+   {
+    "citation": "doc_67.txt",
+    "chunk_id": "3845ae1dc7f9",
+    "text": "Necrotizing Fasciitis Causes. Necrotizing fasciitis is caused by bacteria in the vast majority of cases, though fungi can also rarely lead to this condition as well.Many cases of necrotizing fasciitis are caused by group A beta-hemolytic streptococci (Streptococcus pyogenes), either individually or along with other bacterial pathogens.Group A streptococcus is the same bacteria responsible for  strep throat , impetigo (skin infection), and rheumatic fever.n many cases of necrotizing fasciitis, there is a history of prior trauma, such as a cut, scrape, insect bite, burn, or needle puncture wound. These lesions may initially appear trivial or minor. Surgical incision sites and various surgical procedures may also serve as a source of infection.",
+    "score": 14.039
+   },
+   {
+    "citation": "doc_69.txt",
+    "chunk_id": "0b0d95eb256d",
+    "text": "Necrotizing fasciitis is caused by several kinds of bacteria. Some of these bacteria also cause infections such as strep throat and impetigo. Usually the infections caused by these bacteria are mild.But in rare cases they can cause a more dangerous infection.ecrotizing fasciitis is an infection caused by bacteria. It can destroy skin, fat, and the tissue covering the muscles within a very short time. The disease sometimes is called flesh-eating bacteria. When it occurs on the genitals, it is called Fournier gangrene. Necrotizing fasciitis is very rare but serious.",
+    "score": 9.743
+   },
+   {
+    "citation": "doc_05.txt",
+    "chunk_id": "36984cce390f",
+    "text": "DNA structure. DNA is made up of molecules called nucleotides. Each nucleotide contains a phosphate group, a sugar group and a nitrogen base. The four types of nitrogen bases are adenine (A), thymine (T), guanine (G) and cytosine (C).The order of these bases is what determines DNA's instructions, or genetic code.Similar to the way the order of letters in the alphabet can be used to form a word, the order of nitrogen bases in a DNA sequence forms genes, which in the language of the cell, tells cells how to make proteins.NA structure. DNA is made up of molecules called nucleotides. Each nucleotide contains a phosphate group, a sugar group and a nitrogen base. The four types of nitrogen bases are adenine (A), thymine (T), guanine (G) and cytosine (C).",
+    "score": 3.252
+   },
+   {
+    "citation": "doc_01.txt",
+    "chunk_id": "0c715f6110fb",
+    "text": "9. Get help from a doctor now \u203a. Medication duration: Succinate (toprol) is the long acting form of metoprolol where as tartrate (lopressor) is the shorter acting form. Toprol can be taken once a day and Lopressor is usually taken at least twice a day....Read more.Great you're all set!. Get help from a doctor now \u203a. Medication duration: Succinate (toprol) is the long acting form of metoprolol where as tartrate (lopressor) is the shorter acting form. Toprol can be taken once a day and Lopressor is usually taken at least twice a day.",
+    "score": 0.0
+   }
+  ],
+  "support": {
+   "clm_facbe13a5251": {
+    "claim_id": "clm_facbe13a5251",
+    "text": "Necrotizing fasciitis is primarily caused by group A Streptococcus bacteria, similar to those causing strep throat.",
+    "coverage": 0.75,
+    "entailment": 0.9953,
+    "supporting_sentence": "Necrotizing fasciitis is caused by bacteria in the vast majority of cases, though fungi can also rarely lead to this condition as well.Many cases of necrotizing fasciitis are caused by group A beta-hemolytic streptococci (Streptococcus pyogenes), either individually or along with other bacterial pathogens.Group A streptococcus is the same bacteria responsible for  strep throat , impetigo (skin infection), and rheumatic fever.n many cases of necrotizing fasciitis, there is a history of prior trauma, such as a cut, scrape, insect bite, burn, or needle puncture wound.",
+    "citation": "doc_67.txt"
+   },
+   "clm_e9f60424ddac": {
+    "claim_id": "clm_e9f60424ddac",
+    "text": "other types of bacteria like Staphylococcus and others have also been linked to the disease.",
+    "coverage": 0.778,
+    "entailment": 0.9956,
+    "supporting_sentence": "That's the same type of bacteria that causes strep throat.However, several types of bacteria, such as staphylococcus and others, have also been associated with the disease.Necrotizing fasciitis occurs when such bacteria infect the superficial fascia, a layer of connective tissue below the skin.owever, several types of bacteria, such as staphylococcus and others, have also been associated with the disease.",
+    "citation": "doc_68.txt"
+   },
+   "clm_1b74656def98": {
+    "claim_id": "clm_1b74656def98",
+    "text": "(Necrotizing) This condition typically occurs when these bacteria infect the superficial fascia, a layer",
+    "coverage": 0.9,
+    "entailment": 0.9928,
+    "supporting_sentence": "Necrotizing fasciitis occurs when such bacteria infect the superficial fascia, a layer of connective tissue below the skin.",
+    "citation": "doc_68.txt"
+   }
+  },
+  "claims": [
+   {
+    "text": "Necrotizing fasciitis is primarily caused by group A Streptococcus bacteria, similar to those causing strep throat.",
+    "claim_id": "clm_facbe13a5251",
+    "start": 0,
+    "end": 115,
+    "sent_index": 0,
+    "meta": {
+     "surface": "Necrotizing fasciitis is primarily caused by group A Streptococcus bacteria, similar to those causing strep throat.",
+     "decontextualised": false,
+     "splitter": "rule"
+    }
+   },
+   {
+    "text": "other types of bacteria like Staphylococcus and others have also been linked to the disease.",
+    "claim_id": "clm_e9f60424ddac",
+    "start": 116,
+    "end": 217,
+    "sent_index": 1,
+    "meta": {
+     "surface": "However, other types of bacteria like Staphylococcus and others have also been linked to the disease.",
+     "decontextualised": false,
+     "splitter": "rule"
+    }
+   },
+   {
+    "text": "(Necrotizing) This condition typically occurs when these bacteria infect the superficial fascia, a layer",
+    "claim_id": "clm_1b74656def98",
+    "start": 218,
+    "end": 308,
+    "sent_index": 2,
+    "meta": {
+     "surface": "This condition typically occurs when these bacteria infect the superficial fascia, a layer",
+     "decontextualised": true,
+     "splitter": "rule"
+    }
+   }
+  ],
+  "verdicts": [
+   {
+    "claim_id": "clm_facbe13a5251",
+    "label": "supported",
+    "support_prob": 0.9952926635742188,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "6cd803490e6b",
+     "3845ae1dc7f9",
+     "0b0d95eb256d",
+     "36984cce390f",
+     "0c715f6110fb"
+    ],
+    "latency_s": 0.0866385333335226,
+    "meta": {}
+   },
+   {
+    "claim_id": "clm_e9f60424ddac",
+    "label": "supported",
+    "support_prob": 0.9955449104309082,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "6cd803490e6b",
+     "3845ae1dc7f9",
+     "0b0d95eb256d",
+     "36984cce390f",
+     "0c715f6110fb"
+    ],
+    "latency_s": 0.0866385333335226,
+    "meta": {}
+   },
+   {
+    "claim_id": "clm_1b74656def98",
+    "label": "supported",
+    "support_prob": 0.992850661277771,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "6cd803490e6b",
+     "3845ae1dc7f9",
+     "0b0d95eb256d",
+     "36984cce390f",
+     "0c715f6110fb"
+    ],
+    "latency_s": 0.0866385333335226,
+    "meta": {}
+   },
+   {
+    "claim_id": "clm_facbe13a5251",
+    "label": "supported",
+    "support_prob": 0.9952926635742188,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "6cd803490e6b",
+     "3845ae1dc7f9",
+     "0b0d95eb256d",
+     "36984cce390f",
+     "0c715f6110fb"
+    ],
+    "latency_s": 0.08104013333346909,
+    "meta": {}
+   },
+   {
+    "claim_id": "clm_e9f60424ddac",
+    "label": "supported",
+    "support_prob": 0.9955449104309082,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "6cd803490e6b",
+     "3845ae1dc7f9",
+     "0b0d95eb256d",
+     "36984cce390f",
+     "0c715f6110fb"
+    ],
+    "latency_s": 0.08104013333346909,
+    "meta": {}
+   },
+   {
+    "claim_id": "clm_1b74656def98",
+    "label": "supported",
+    "support_prob": 0.992850661277771,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "6cd803490e6b",
+     "3845ae1dc7f9",
+     "0b0d95eb256d",
+     "36984cce390f",
+     "0c715f6110fb"
+    ],
+    "latency_s": 0.08104013333346909,
+    "meta": {}
+   }
+  ],
+  "decisions": [
+   {
+    "claim_id": "clm_facbe13a5251",
+    "action": "accept",
+    "reason": "not_flagged",
+    "router": "rule",
+    "action_probs": {},
+    "iteration": 0
+   },
+   {
+    "claim_id": "clm_e9f60424ddac",
+    "action": "accept",
+    "reason": "not_flagged",
+    "router": "rule",
+    "action_probs": {},
+    "iteration": 0
+   },
+   {
+    "claim_id": "clm_1b74656def98",
+    "action": "accept",
+    "reason": "not_flagged",
+    "router": "rule",
+    "action_probs": {},
+    "iteration": 0
+   }
+  ],
+  "cost_by_stage": [
+   {
+    "stage": "retrieve",
+    "tokens": 0,
+    "latency_s": 0.0001,
+    "calls": 1
+   },
+   {
+    "stage": "generate",
+    "tokens": 901,
+    "latency_s": 2.1819,
+    "calls": 1
+   },
+   {
+    "stage": "split",
+    "tokens": 0,
+    "latency_s": 0.0001,
+    "calls": 0
+   },
+   {
+    "stage": "detect",
+    "tokens": 2526,
+    "latency_s": 0.2599,
+    "calls": 3
+   },
+   {
+    "stage": "reverify",
+    "tokens": 2526,
+    "latency_s": 0.2431,
+    "calls": 3
+   }
+  ],
+  "metrics": {
+   "n_turns": 1,
+   "faithfulness": 1.0,
+   "abstention_rate": 0.0,
+   "turns_harmed_rate": 0.0,
+   "mean_iterations": 1.0,
+   "tokens_per_turn": 5953.0,
+   "latency_per_turn": 2.8587,
+   "retrieval_calls_per_turn": 1.0,
+   "llm_calls_per_turn": 1.0,
+   "action_counts": {
+    "accept": 3
+   },
+   "routing_reasons": {
+    "not_flagged": 3
+   },
+   "correction_n_attempts": 0,
+   "correction_worse_rate": 0.0,
+   "correction_futile_rate": 0.0,
+   "correction_net_gain": 0.0,
+   "correction_note": "no correction attempts (router never corrected)"
+  },
+  "warnings": [
+   {
+    "level": "warn",
+    "title": "Fact-checker is not calibrated \u2014 it scored nothing below 0.45",
+    "body": "Every claim came back above the decision boundary, so nli flagged nothing and the router had no work to do. Clearly false claims can score 0.504 here. Fit a scaler: python scripts/calibrate_detector.py --detector nli (needs RAGTruth; a scaler fitted on the demo fixture is deliberately refused)."
+   }
+  ],
+  "seconds": 2.86
+ },
+ "actual": "Necrotizing fasciitis is primarily caused by group A Streptococcus bacteria, similar to those causing strep throat. However, other types of bacteria like Staphylococcus and others have also been linked to the disease. This condition typically occurs when these bacteria infect the superficial fascia, a layer"
+}

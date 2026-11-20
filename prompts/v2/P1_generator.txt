@@ -1,0 +1,15 @@
+Answer the QUESTION using only the PASSAGES.
+
+PASSAGES:
+{evidence}
+
+QUESTION: {question}
+
+Rules:
+- Answer in your own words, in at most three sentences.
+- Do NOT copy the passages. Do NOT repeat headings, section numbers or bracketed markers.
+- Use only facts stated in the passages. Add nothing else.
+- If the passages do not answer the question, reply exactly:
+  The documents do not contain this information.
+
+ANSWER:

@@ -1,0 +1,15 @@
+{
+ "_how_judged": "Pass/Fail decided by reading each saved output in test-data/outputs/ and the passage the verifier cited for every kept sentence (the 'support' field), against the expected output written before the run.",
+ "T1": {"verdict": "Fail", "actual_short": "4-sentence answer; 2 sentences 'verified' against unrelated passages (crab traps 0.86, amino acids 0.99)"},
+ "T2": {"verdict": "Pass", "actual_short": "3-sentence answer (group A Streptococcus etc.), each sentence cites the matching source sentence (0.99)"},
+ "T3": {"verdict": "Pass", "actual_short": "Step list from the shed document; cut off at 'Cut two 2x' (64-token limit); one citation points to the wrong passage"},
+ "T4": {"verdict": "Pass", "actual_short": "1 sentence (download in iTunes, click Audiobooks...), cited to the instructions passage (0.91)"},
+ "T5": {"verdict": "Pass", "actual_short": "Not enough evidence (25% of key terms found)"},
+ "T6": {"verdict": "Pass", "actual_short": "Not enough evidence (0% of key terms found)"},
+ "T7": {"verdict": "Pass", "actual_short": "Same 4-sentence answer as T1 despite the typo (shares T1's citation flaw)"},
+ "T8": {"verdict": "Pass", "actual_short": "Not enough evidence (38% of key terms); did not answer from memory"},
+ "T9": {"verdict": "Fail", "actual_short": "Answer in English, but 2 of 4 sentences 'verified' against unrelated passages, as in T1"},
+ "T10": {"verdict": "Fail", "actual_short": "Answered only the body-systems part; the necrotizing fasciitis part (answerable) was ignored"},
+ "T11": {"verdict": "Pass", "actual_short": "Error: question is required"},
+ "T12": {"verdict": "Pass", "actual_short": "Not enough evidence (0% of key terms found)"}
+}

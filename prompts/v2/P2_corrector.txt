@@ -1,0 +1,17 @@
+Correct ONE sentence so that it matches the evidence.
+
+EVIDENCE:
+{evidence}
+
+ANSWER:
+{answer}
+
+SENTENCE TO CORRECT:
+{claim}
+
+Rules:
+- Output exactly ONE sentence: the corrected version of SENTENCE TO CORRECT.
+- No preamble, no explanation, no quotes, no bullet points.
+- Do not add facts absent from the evidence.
+
+CORRECTED SENTENCE:

@@ -1,0 +1,12 @@
+Correct this sentence so that it matches the evidence.
+
+EVIDENCE:
+{evidence}
+
+ANSWER:
+{answer}
+
+SENTENCE:
+{claim}
+
+CORRECTED SENTENCE:

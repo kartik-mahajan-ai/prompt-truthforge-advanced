@@ -1,0 +1,32 @@
+{
+ "_note": "Fill every [TO FILL] value, then run: python \"Milestone 2/code/build_m2_docs.py\" (it rebuilds the PDFs, README and form answers).",
+ "team_id": "PE-B01-34",
+ "team_name": "TruthForge",
+ "project_title": "TruthForge: Verified Answers from Your Documents",
+ "batch": "B01-12",
+ "faculty": "Sonal Kukreja",
+ "members": [
+  {
+   "name": "Kartik Mahajan",
+   "enrollment": "S24CSEU0640",
+   "role": "Team leader",
+   "tasks": "Designed the 8-step pipeline; wrote P1 Generator and P2 Corrector and their versions v1-v3; built the Colab prototype and the web app Ask tab; wrote the Milestone 2 report",
+   "evidence": "prompts/v1-v3, prompts/final/; code/prompt_experiments.py; code/TruthForge_Demo.ipynb; PDF Sections 2-3",
+   "percent": "60"
+  },
+  {
+   "name": "Aaditya Goel",
+   "enrollment": "S24CSEU0614",
+   "role": "Testing and documentation",
+   "tasks": "Built and ran the 12-input test table (normal, edge, invalid) and recorded verdicts and screenshots; made the 5 diagrams; prepared the research abstract and reel script",
+   "evidence": "test-data/results.csv, verdicts.json, outputs/; code/run_tests.py, make_diagrams.py; docs/diagrams/; PDF Sections 4 and 6",
+   "percent": "40"
+  }
+ ],
+ "prototype_link": "[TO FILL: Colab link to code/TruthForge_Demo.ipynb, shared as 'Anyone with the link']",
+ "repository_link": "https://github.com/kartik-mahajan-ai/prompt-truthforge-advanced",
+ "reel_link": "[TO FILL: Drive or unlisted YouTube link]",
+ "reel_seconds": "[TO FILL: exact length, 90-150]",
+ "changes_since_m1": "[TO FILL: 3-5 lines on what changed since Milestone 1 (for Sections 2 and 5)]",
+ "project_type": "App with code"
+}

@@ -1,0 +1,1 @@
+For a lot of PCs (especially laptops and tablets), your PC goes to sleep when you close your lid or press the power button. To make your PC sleep: Open power options: For Windows 10, in the search box on the taskbar, type power options and then select Power Options.

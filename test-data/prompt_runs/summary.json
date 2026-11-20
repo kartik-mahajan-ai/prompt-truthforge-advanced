@@ -1,0 +1,79 @@
+{
+ "corrector": {
+  "v1": {
+   "n": 40,
+   "rejected_by_guard": 5,
+   "rejection_reasons": {
+    "output_unrelated_to_claim": 1,
+    "no_sentence_matches_claim(3_sentences)": 2,
+    "echoed_answer_no_correction(1_sentences_copied)": 1,
+    "no_sentence_matches_claim(2_sentences)": 1
+   },
+   "raw_output_multi_sentence": 5,
+   "unsupported_sentinel": 0,
+   "changed": 20,
+   "unchanged": 15,
+   "changed_and_verifier_supported": 4,
+   "mean_output_tokens": 33.1,
+   "format_violations": 5,
+   "substantive_changes": 17,
+   "substantive_and_verifier_supported": 4
+  },
+  "v2": {
+   "n": 40,
+   "rejected_by_guard": 6,
+   "rejection_reasons": {
+    "output_unrelated_to_claim": 6
+   },
+   "raw_output_multi_sentence": 0,
+   "unsupported_sentinel": 0,
+   "changed": 12,
+   "unchanged": 22,
+   "changed_and_verifier_supported": 4,
+   "mean_output_tokens": 24.9,
+   "format_violations": 0,
+   "substantive_changes": 9,
+   "substantive_and_verifier_supported": 4
+  },
+  "v3": {
+   "n": 40,
+   "rejected_by_guard": 8,
+   "rejection_reasons": {
+    "output_unrelated_to_claim": 8
+   },
+   "raw_output_multi_sentence": 0,
+   "unsupported_sentinel": 0,
+   "changed": 10,
+   "unchanged": 22,
+   "changed_and_verifier_supported": 3,
+   "mean_output_tokens": 24.7,
+   "format_violations": 0,
+   "substantive_changes": 7,
+   "substantive_and_verifier_supported": 3
+  }
+ },
+ "generator": {
+  "v1": {
+   "n": 20,
+   "copied_8gram": 6,
+   "bracket_markers": 0,
+   "over_three_sentences": 12,
+   "mean_words": 42.3
+  },
+  "v2": {
+   "n": 20,
+   "copied_8gram": 6,
+   "bracket_markers": 0,
+   "over_three_sentences": 6,
+   "mean_words": 44.2
+  }
+ },
+ "settings": {
+  "model": "Qwen/Qwen2.5-1.5B-Instruct",
+  "decoding": "greedy (temperature 0)",
+  "max_new_tokens": 64,
+  "verifier": "NLI DeBERTa-v3, flag below 0.5",
+  "inputs": "first 40 NLI-flagged claims / first 20 questions, RAGTruth QA train split"
+ },
+ "seconds": 198
+}

@@ -1,0 +1,22 @@
+Correct ONE sentence so that it matches the evidence.
+
+EVIDENCE:
+{evidence}
+
+SURROUNDING ANSWER (context only -- never reproduce this):
+{answer}
+
+SENTENCE TO CORRECT:
+{claim}
+
+Rules:
+- Output exactly ONE sentence: the corrected version of SENTENCE TO CORRECT.
+- Do NOT repeat the surrounding answer. Do NOT output more than one sentence.
+- No preamble, no explanation, no quotes, no bullet points.
+- Keep every detail the evidence supports. Do not shorten to play safe.
+- Do not add facts absent from the evidence.
+- Do not hedge. If the evidence does not settle the point, output exactly:
+  UNSUPPORTED
+- Keep the original wording wherever the evidence does not require a change.
+
+CORRECTED SENTENCE:

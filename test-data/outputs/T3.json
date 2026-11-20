@@ -1,0 +1,350 @@
+{
+ "test": "T3",
+ "type": "Normal",
+ "question": "building a lean-to shed",
+ "expected": "Answer drawn from the documents; every kept sentence supported",
+ "response": {
+  "question": "building a lean-to shed",
+  "answer": "To build a lean-to shed according to the provided passage:\n1. Prepare the site by laying down a 4-inch layer of compacted gravel.\n2. Cut two 4x4 skids at 70 2/4 inches each and set them on the ground.\n3. Cut two 2x",
+  "insufficient_evidence": false,
+  "message": null,
+  "draft": "To build a lean-to shed according to the provided passage:\n1. Prepare the site by laying down a 4-inch layer of compacted gravel.\n2. Cut two 4x4 skids at 70 2/4 inches each and set them on the ground.\n3. Cut two 2x",
+  "n_claims": 4,
+  "n_dropped": 0,
+  "sources": [
+   {
+    "citation": "doc_43.txt",
+    "chunk_id": "3f8e626b8e8f",
+    "text": "Lean To Shed Plans \u2013 Step By Step Instructions For Building A Lean-To Shed. 1. Prepare the site with a 4\u2033 layer of compacted gravel. Cut the two 4 x 4 skids at 70 2/4\u2033. Set and level the skids following the shed building plans. Cut two 2 x 6 rim joists at 7 3/4 \u201d and six joists at 44 3/4\u2033. Assemble the floor and set it on the skids as shown in the floor framing section of the lean to shed plans. Check for square, and then anchor the frame to the skids with four joist clip angles.",
+    "score": 17.175
+   },
+   {
+    "citation": "doc_45.txt",
+    "chunk_id": "08243c6d85a5",
+    "text": "Building the Shed. The shed shown here is 6 feet long by 4 feet wide. You can easily expand its dimensions in increments of 2 or 4 feet. 1To construct the framing for the shed\u2019s floor, cut two pressure-treated 2 by 4s to a length of 6 feet for the rim joists.",
+    "score": 10.352
+   },
+   {
+    "citation": "doc_44.txt",
+    "chunk_id": "eb6ae6908924",
+    "text": "Cut two pressure-treated 4 by 4s to a length of 6 feet for the skids. Position the frame on the skids, and, when square, toenail the floor joists to the skids. Attach 3/4-inch tongue-and-groove plywood flooring onto the frame. 2he walls for the shed are constructed separately and then raised onto the frame.",
+    "score": 4.441
+   },
+   {
+    "citation": "doc_27.txt",
+    "chunk_id": "1bd4782f4c0c",
+    "text": "Amino acids are the basic building blocks of proteins. Nonessential amino acids can be made by the body, while essential amino acids cannot be made by the body so you must get them from your diet.You must have all of the amino acids so your body can build the wide variety of proteins it needs. Protein is needed for the repair, growth and maintenance of the cells.mino acids are the basic building blocks of proteins. Nonessential amino acids can be made by the body, while essential amino acids cannot be made by the body so you must get them from your diet.",
+    "score": 4.299
+   },
+   {
+    "citation": "doc_16.txt",
+    "chunk_id": "878461f09ce8",
+    "text": "Instructions. Run the dryer on a regular setting for 20 minutes to soften the plastic. Scrape the plastic off with a wooden or plastic spatula or paint scraper, taking care not to damage the dryer's interior. Apply 1 to 2 tsp. nail polish remover to a clean cloth, and rub the plastic to dissolve it.Rub the area with a damp cloth to rinse the nail polish remover. Mix 1 tsp. liquid laundry soap with 1 cup water. Dip a clean cloth in this solution, and rub the area again.Rinse well with a cloth dipped in clean water.ave. Jupiterimages/BananaStock/Getty Images. A plastic coated bib or zip top bag gone astray probably won't melt in a dryer unless you're using the high heat setting, but if it does, it won't cause serious damage. Today's dryers are painted with a synthetic enamel coating that holds up well to heat and wear.",
+    "score": 0.962
+   }
+  ],
+  "support": {
+   "clm_e25b3983c876": {
+    "claim_id": "clm_e25b3983c876",
+    "text": "To build a lean-to shed according to the provided passage:",
+    "coverage": 0.5,
+    "entailment": 0.9812,
+    "supporting_sentence": "Assemble the floor and set it on the skids as shown in the floor framing section of the lean to shed plans.",
+    "citation": "doc_43.txt"
+   },
+   "clm_5dff09489b20": {
+    "claim_id": "clm_5dff09489b20",
+    "text": "Prepare the site by laying down a 4-inch layer of compacted gravel.",
+    "coverage": 0.778,
+    "entailment": 0.6077,
+    "supporting_sentence": "Lean To Shed Plans \u2013 Step By Step Instructions For Building A Lean-To Shed. 1. Prepare the site with a 4\u2033 layer of compacted gravel. Cut the two 4 x 4 skids at 70 2/4\u2033. Set and level the skids following the shed building plans. Cut two 2 x 6 rim joists at 7 3/4 \u201d and six joists at 44 3/4\u2033. Assemble the floor and set it on the skids as shown in the floor framing section of the lean to shed plans. Check for square, and then anchor the frame to the skids with four joist clip angles.",
+    "citation": "doc_43.txt"
+   },
+   "clm_1d7d8fd6bc9f": {
+    "claim_id": "clm_1d7d8fd6bc9f",
+    "text": "Cut two 4x4 skids at 70 2/4 inches each and set them on the ground.",
+    "coverage": 0.636,
+    "entailment": 0.8612,
+    "supporting_sentence": "Amino acids are the basic building blocks of proteins. Nonessential amino acids can be made by the body, while essential amino acids cannot be made by the body so you must get them from your diet.You must have all of the amino acids so your body can build the wide variety of proteins it needs. Protein is needed for the repair, growth and maintenance of the cells.mino acids are the basic building blocks of proteins. Nonessential amino acids can be made by the body, while essential amino acids cannot be made by the body so you must get them from your diet.",
+    "citation": "doc_27.txt"
+   },
+   "clm_d2b626b5ec0a": {
+    "claim_id": "clm_d2b626b5ec0a",
+    "text": "Cut two 2x",
+    "coverage": 0.667,
+    "entailment": 0.9909,
+    "supporting_sentence": "Cut two 2 x 6 rim joists at 7 3/4 \u201d and six joists at 44 3/4\u2033.",
+    "citation": "doc_43.txt"
+   }
+  },
+  "claims": [
+   {
+    "text": "To build a lean-to shed according to the provided passage:",
+    "claim_id": "clm_e25b3983c876",
+    "start": 0,
+    "end": 58,
+    "sent_index": 0,
+    "meta": {
+     "surface": "To build a lean-to shed according to the provided passage:",
+     "decontextualised": false,
+     "splitter": "rule"
+    }
+   },
+   {
+    "text": "Prepare the site by laying down a 4-inch layer of compacted gravel.",
+    "claim_id": "clm_5dff09489b20",
+    "start": 62,
+    "end": 129,
+    "sent_index": 2,
+    "meta": {
+     "surface": "Prepare the site by laying down a 4-inch layer of compacted gravel.",
+     "decontextualised": false,
+     "splitter": "rule"
+    }
+   },
+   {
+    "text": "Cut two 4x4 skids at 70 2/4 inches each and set them on the ground.",
+    "claim_id": "clm_1d7d8fd6bc9f",
+    "start": 133,
+    "end": 200,
+    "sent_index": 4,
+    "meta": {
+     "surface": "Cut two 4x4 skids at 70 2/4 inches each and set them on the ground.",
+     "decontextualised": false,
+     "splitter": "rule"
+    }
+   },
+   {
+    "text": "Cut two 2x",
+    "claim_id": "clm_d2b626b5ec0a",
+    "start": 204,
+    "end": 214,
+    "sent_index": 6,
+    "meta": {
+     "surface": "Cut two 2x",
+     "decontextualised": false,
+     "splitter": "rule"
+    }
+   }
+  ],
+  "verdicts": [
+   {
+    "claim_id": "clm_e25b3983c876",
+    "label": "supported",
+    "support_prob": 0.9811636805534363,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "3f8e626b8e8f",
+     "08243c6d85a5",
+     "eb6ae6908924",
+     "1bd4782f4c0c",
+     "878461f09ce8"
+    ],
+    "latency_s": 0.07879099999991013,
+    "meta": {}
+   },
+   {
+    "claim_id": "clm_5dff09489b20",
+    "label": "supported",
+    "support_prob": 0.6070175766944885,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "3f8e626b8e8f",
+     "08243c6d85a5",
+     "eb6ae6908924",
+     "1bd4782f4c0c",
+     "878461f09ce8"
+    ],
+    "latency_s": 0.07879099999991013,
+    "meta": {}
+   },
+   {
+    "claim_id": "clm_1d7d8fd6bc9f",
+    "label": "supported",
+    "support_prob": 0.861440896987915,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "3f8e626b8e8f",
+     "08243c6d85a5",
+     "eb6ae6908924",
+     "1bd4782f4c0c",
+     "878461f09ce8"
+    ],
+    "latency_s": 0.07879099999991013,
+    "meta": {}
+   },
+   {
+    "claim_id": "clm_d2b626b5ec0a",
+    "label": "supported",
+    "support_prob": 0.9909378290176392,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "3f8e626b8e8f",
+     "08243c6d85a5",
+     "eb6ae6908924",
+     "1bd4782f4c0c",
+     "878461f09ce8"
+    ],
+    "latency_s": 0.07879099999991013,
+    "meta": {}
+   },
+   {
+    "claim_id": "clm_e25b3983c876",
+    "label": "supported",
+    "support_prob": 0.9811636805534363,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "3f8e626b8e8f",
+     "08243c6d85a5",
+     "eb6ae6908924",
+     "1bd4782f4c0c",
+     "878461f09ce8"
+    ],
+    "latency_s": 0.07793897500005187,
+    "meta": {}
+   },
+   {
+    "claim_id": "clm_5dff09489b20",
+    "label": "supported",
+    "support_prob": 0.6070175766944885,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "3f8e626b8e8f",
+     "08243c6d85a5",
+     "eb6ae6908924",
+     "1bd4782f4c0c",
+     "878461f09ce8"
+    ],
+    "latency_s": 0.07793897500005187,
+    "meta": {}
+   },
+   {
+    "claim_id": "clm_1d7d8fd6bc9f",
+    "label": "supported",
+    "support_prob": 0.861440896987915,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "3f8e626b8e8f",
+     "08243c6d85a5",
+     "eb6ae6908924",
+     "1bd4782f4c0c",
+     "878461f09ce8"
+    ],
+    "latency_s": 0.07793897500005187,
+    "meta": {}
+   },
+   {
+    "claim_id": "clm_d2b626b5ec0a",
+    "label": "supported",
+    "support_prob": 0.9909378290176392,
+    "detector": "nli",
+    "cited_doc_ids": [
+     "3f8e626b8e8f",
+     "08243c6d85a5",
+     "eb6ae6908924",
+     "1bd4782f4c0c",
+     "878461f09ce8"
+    ],
+    "latency_s": 0.07793897500005187,
+    "meta": {}
+   }
+  ],
+  "decisions": [
+   {
+    "claim_id": "clm_e25b3983c876",
+    "action": "accept",
+    "reason": "not_flagged",
+    "router": "rule",
+    "action_probs": {},
+    "iteration": 0
+   },
+   {
+    "claim_id": "clm_5dff09489b20",
+    "action": "accept",
+    "reason": "not_flagged",
+    "router": "rule",
+    "action_probs": {},
+    "iteration": 0
+   },
+   {
+    "claim_id": "clm_1d7d8fd6bc9f",
+    "action": "accept",
+    "reason": "not_flagged",
+    "router": "rule",
+    "action_probs": {},
+    "iteration": 0
+   },
+   {
+    "claim_id": "clm_d2b626b5ec0a",
+    "action": "accept",
+    "reason": "not_flagged",
+    "router": "rule",
+    "action_probs": {},
+    "iteration": 0
+   }
+  ],
+  "cost_by_stage": [
+   {
+    "stage": "retrieve",
+    "tokens": 0,
+    "latency_s": 0.0001,
+    "calls": 1
+   },
+   {
+    "stage": "generate",
+    "tokens": 670,
+    "latency_s": 1.9763,
+    "calls": 1
+   },
+   {
+    "stage": "split",
+    "tokens": 0,
+    "latency_s": 0.0002,
+    "calls": 0
+   },
+   {
+    "stage": "detect",
+    "tokens": 2490,
+    "latency_s": 0.3152,
+    "calls": 4
+   },
+   {
+    "stage": "reverify",
+    "tokens": 2490,
+    "latency_s": 0.3118,
+    "calls": 4
+   }
+  ],
+  "metrics": {
+   "n_turns": 1,
+   "faithfulness": 1.0,
+   "abstention_rate": 0.0,
+   "turns_harmed_rate": 0.0,
+   "mean_iterations": 1.0,
+   "tokens_per_turn": 5650.0,
+   "latency_per_turn": 2.7434,
+   "retrieval_calls_per_turn": 1.0,
+   "llm_calls_per_turn": 1.0,
+   "action_counts": {
+    "accept": 4
+   },
+   "routing_reasons": {
+    "not_flagged": 4
+   },
+   "correction_n_attempts": 0,
+   "correction_worse_rate": 0.0,
+   "correction_futile_rate": 0.0,
+   "correction_net_gain": 0.0,
+   "correction_note": "no correction attempts (router never corrected)"
+  },
+  "warnings": [
+   {
+    "level": "warn",
+    "title": "Fact-checker is not calibrated \u2014 it scored nothing below 0.45",
+    "body": "Every claim came back above the decision boundary, so nli flagged nothing and the router had no work to do. Clearly false claims can score 0.504 here. Fit a scaler: python scripts/calibrate_detector.py --detector nli (needs RAGTruth; a scaler fitted on the demo fixture is deliberately refused)."
+   }
+  ],
+  "seconds": 2.74
+ },
+ "actual": "To build a lean-to shed according to the provided passage:\n1. Prepare the site by laying down a 4-inch layer of compacted gravel.\n2. Cut two 4x4 skids at 70 2/4 inches each and set them on the ground.\n3. Cut two 2x"
+}

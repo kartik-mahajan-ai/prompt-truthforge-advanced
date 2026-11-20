@@ -1,0 +1,8 @@
+Answer the question using the passages.
+
+PASSAGES:
+{evidence}
+
+QUESTION: {question}
+
+ANSWER:
