@@ -15,12 +15,17 @@ answer against those documents, removes or corrects sentences that are not suppo
 ## How to open and run it
 - **Colab (easiest):** open `code/TruthForge_Demo.ipynb` in Google Colab, choose Runtime → Change runtime type → T4 GPU,
   then Runtime → Run all. The last cell opens a form where you can type your own question.
-- **Locally (Windows/Linux, NVIDIA GPU):** `git clone https://github.com/kartik-mahajan-ai/TruthForge.git`, then
-  `pip install -e ".[models]"` and `python -m truthforge.ui --open` (web app; use the Ask tab).
-- **Re-running the tests and prompt experiments:** the scripts in `code/` use the TruthForge code from the repo above.
-  Clone this repository *inside* that checkout as a folder named `Milestone 2`
-  (`git clone <this repo> "TruthForge/Milestone 2"`), download RAGTruth with `python scripts/download_ragtruth.py`, then
-  run e.g. `python "Milestone 2/code/run_tests.py"` from the TruthForge folder.
+- **Locally (Windows/Linux, NVIDIA GPU):** the TruthForge code is in `code/truthforge/`.
+  ```bash
+  cd code/truthforge
+  pip install -e ".[models]"
+  python scripts/download_ragtruth.py      # RAGTruth data (35 MB) into code/truthforge/data/raw/
+  python -m truthforge.ui --open           # web app; use the Ask tab
+  ```
+- **Re-running the tests and prompt experiments** (from the top of this folder, after the steps above):
+  `python code/run_tests.py`, `python code/prompt_experiments.py`, `python code/screenshots.py T1 T2 T8`.
+- **Rebuilding the report:** fill `submit/team_info.json`, run `python code/build_m2_docs.py`, then
+  `powershell -File code/export_pdfs.ps1` (needs Microsoft Word).
 
 ## Prompts
 Two final prompts on Qwen2.5-1.5B-Instruct (greedy, 64 tokens): `prompts/final/P1_generator.txt` (drafts the
@@ -32,6 +37,7 @@ answer) and `prompts/final/P2_corrector.txt` (rewrites one unsupported claim). O
 |---|---|
 | `prompts/` | v1, v2, v3 and final prompt versions, one `.txt` per prompt |
 | `code/` | Colab notebook (prototype), `run_tests.py`, `prompt_experiments.py`, `screenshots.py`, diagram and report builders |
+| `code/truthforge/` | the TruthForge system itself (Python package, scripts, unit tests) |
 | `test-data/` | the 84 test documents, `results.csv`, `verdicts.json`, one JSON per test in `outputs/`, prompt-version runs in `prompt_runs/` |
 | `docs/` | diagrams, screenshots, the Milestone 2 PDF |
 | `submit/` | the two PDFs to upload, form answers, reel script |

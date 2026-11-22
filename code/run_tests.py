@@ -18,7 +18,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parents[1]
-REPO = HERE.parent
+REPO = HERE / "code" / "truthforge"   # this folder's copy of TruthForge
 sys.path.insert(0, str(REPO / "src"))
 
 from truthforge.data.ragtruth import load_ragtruth  # noqa: E402

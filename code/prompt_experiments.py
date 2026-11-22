@@ -23,7 +23,7 @@ import time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parents[1]           # Milestone 2/
-REPO = HERE.parent                                   # TruthForge/
+REPO = HERE / "code" / "truthforge"                  # this folder's copy of TruthForge
 sys.path.insert(0, str(REPO / "src"))
 
 import truthforge.correct.rewrite as rw              # noqa: E402

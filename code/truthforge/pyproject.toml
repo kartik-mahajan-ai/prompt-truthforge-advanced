@@ -1,0 +1,60 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "truthforge"
+version = "0.1.0"
+description = "Deciding when correcting a RAG answer is worth it"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+
+# The core package deliberately has NO dependencies: the loop, the router, the
+# rule splitter, BM25, the baselines and every metric run on the standard
+# library alone. That is what keeps the repo rerunnable by a reviewer with no
+# GPU, and it is a claim the test suite enforces.
+dependencies = []
+
+[project.optional-dependencies]
+# Models: the judge, the corrector, the dense retriever.
+#
+# NOTE: do NOT add "minicheck" here. The package of that name on PyPI is an
+# unrelated explicit-state model checker (formal methods), not Liyan06's
+# fact-checking MiniCheck. Installing it shadows nothing useful and imports
+# garbage. The real one is a git install:
+#
+#   pip install "minicheck @ git+https://github.com/Liyan06/MiniCheck.git@main"
+#
+# It is optional: without it, MiniCheckDetector loads the HF checkpoint
+# directly and empirically verifies its input template against a probe set.
+models = [
+  "torch>=2.4",
+  "transformers>=4.44",
+  "sentencepiece>=0.2",
+  "protobuf>=4.0",
+  "accelerate>=0.30",
+  "sentence-transformers>=3.0",
+]
+# Router training and plots.
+train = ["scikit-learn>=1.4", "numpy>=1.26", "matplotlib>=3.8"]
+dev = ["pytest>=8.0", "ruff>=0.6"]
+yaml = ["pyyaml>=6.0"]
+
+[project.scripts]
+truthforge = "truthforge.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["src"]
+
+[tool.ruff]
+line-length = 90
+src = ["src", "scripts", "tests"]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "UP", "B"]
+ignore = ["E501"]

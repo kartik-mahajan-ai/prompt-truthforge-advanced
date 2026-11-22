@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TruthForge</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><text y='13' font-size='13'>&#128296;</text></svg>">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header>
+  <div class="brand">TruthForge <span class="sub">when is fixing worth it?</span></div>
+  <nav role="tablist">
+    <button role="tab" aria-selected="true"  data-tab="ask">Ask</button>
+    <button role="tab" aria-selected="false" data-tab="pipeline">Pipeline</button>
+    <button role="tab" aria-selected="false" data-tab="runs">Runs</button>
+    <button role="tab" aria-selected="false" data-tab="annotate">Annotate</button>
+  </nav>
+  <div class="header-right">
+    <span class="pill" id="gpu-pill"><span class="dot" id="gpu-dot"></span><span id="gpu-text">checking…</span></span>
+    <button class="icon-btn" id="theme-toggle" title="Toggle light / dark" aria-label="Toggle theme">◐</button>
+  </div>
+</header>
+
+<main>
+
+<!-- ================================================== PIPELINE ========= -->
+<!-- ======================================================= ASK ========= -->
+<section class="panel" id="panel-ask" role="tabpanel">
+  <div class="split">
+    <div>
+      <div class="card">
+        <h2>Your documents</h2>
+        <p class="card-note">
+          Everything stays on this machine. Answers are built only from what you upload,
+          and the system refuses to answer when the documents do not cover the question.
+        </p>
+        <div id="dropzone" tabindex="0" role="button"
+             aria-label="Choose files to upload">
+          <strong>Drop files here</strong>
+          <span>or click to choose &mdash; pdf, docx, txt, md, csv</span>
+        </div>
+        <input type="file" id="file-input" multiple hidden
+               accept=".pdf,.docx,.txt,.md,.markdown,.rst,.csv,.log,.json">
+        <div id="doc-list"></div>
+      </div>
+
+      <div class="card">
+        <h2>Ask a question</h2>
+        <label class="field">
+          <textarea id="ask-q" rows="3"
+                    placeholder="What does the contract say about termination?"></textarea>
+        </label>
+        <button class="primary" id="ask-btn">Ask</button>
+        <details style="margin-top:12px;">
+          <summary>Advanced</summary>
+          <div class="row">
+            <label class="field"><span>Fact-checker</span>
+              <select id="ask-detector"></select></label>
+            <label class="field"><span>Passages to retrieve</span>
+              <input type="number" id="ask-topk" value="5" min="1" max="12"></label>
+          </div>
+          <label class="field" style="display:flex;align-items:center;gap:8px;">
+            <input type="checkbox" id="ask-dense" style="width:auto;">
+            <span style="margin:0;">Also use meaning-based search (slower, first use downloads ~130 MB)</span>
+          </label>
+          <div class="row" hidden>
+          </div>
+        </details>
+      </div>
+    </div>
+
+    <div id="ask-out">
+      <div class="card"><div class="empty">Upload a document, then ask it something.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="panel" id="panel-pipeline" role="tabpanel" hidden>
+  <div class="split">
+
+    <!-- ----------------------------------------------------- controls -->
+    <div>
+      <div class="card">
+        <h2>Input</h2>
+
+        <label class="field">
+          <span>Dataset</span>
+          <select id="example-source">
+            <option value="ragtruth" selected>RAGTruth test split — real, human-annotated</option>
+            <option value="sample">Built-in demo examples</option>
+          </select>
+        </label>
+        <label class="field">
+          <span>Example</span>
+          <select id="example-picker"><option value="">— none —</option></select>
+        </label>
+
+        <div id="example-note"></div>
+
+        <label class="field">
+          <span>Question</span>
+          <input type="text" id="question" placeholder="What is the capital of Australia?">
+        </label>
+
+        <label class="field">
+          <span>Answer to check <span class="dim">— leave empty to generate one</span></span>
+          <textarea id="answer" rows="4" placeholder="Paste an answer, or leave blank and pick a real generator below."></textarea>
+        </label>
+
+        <div class="field">
+          <span style="display:block;font-size:11.5px;color:var(--text-secondary);margin-bottom:4px;font-weight:500;">Evidence passages</span>
+          <div id="passages"></div>
+          <button class="ghost" id="add-passage" type="button">+ passage</button>
+        </div>
+      </div>
+
+      <div class="card">
+        <h2>When a claim looks wrong, what should it do?</h2>
+        <p class="card-note">This is the whole experiment. Run the same example three ways and compare.</p>
+
+        <div class="strategy-list">
+          <button class="strategy" data-router="noop" type="button" aria-pressed="false">
+            <span class="s-name">Nothing — just flag it</span>
+            <span class="s-sub">Plain RAG. The floor: cheapest, and wrong answers stay wrong.</span>
+          </button>
+          <button class="strategy" data-router="always_correct" type="button" aria-pressed="false">
+            <span class="s-name">Fix every one</span>
+            <span class="s-sub">What existing systems do. Costs the most, and some fixes make things worse.</span>
+          </button>
+          <button class="strategy" data-router="rule" type="button" aria-pressed="true">
+            <span class="s-name">Decide case by case</span>
+            <span class="s-sub">TruthForge. Skips fixes unlikely to be worth it. The thing being tested.</span>
+          </button>
+        </div>
+
+        <button class="primary" id="run-btn" style="margin-top:14px;">Run</button>
+
+        <details style="margin-top:12px;">
+          <summary>Advanced</summary>
+          <div class="row">
+            <label class="field">
+              <span>Fact-checker</span>
+              <select id="detector"></select>
+            </label>
+            <label class="field">
+              <span>Rewriter</span>
+              <select id="generator"></select>
+            </label>
+          </div>
+          <label class="field">
+            <span>Skip fixes when unsure — <span id="band-label">0.10</span></span>
+            <input type="range" id="th-band" value="0.10" step="0.05" min="0" max="0.45" style="width:100%;">
+          </label>
+          <p class="card-note" style="margin:2px 0 8px;">Higher = leaves more borderline claims alone. This is the main dial the research is about.</p>
+          <label class="field">
+            <span>Passes over the answer</span>
+            <select id="max-iter">
+              <option value="1" selected>1 — faster</option>
+              <option value="2">2 — retries claims still wrong</option>
+            </select>
+          </label>
+          <p class="card-note" style="margin:2px 0 8px;">The experiment uses 2. On the demo the second pass mostly re-tries and changes nothing, so 1 is the default here.</p>
+          <label class="field">
+            <span>When it can't fix a claim</span>
+            <select id="abstain-style">
+              <option value="remove" selected>Delete the sentence</option>
+              <option value="message">Say "could not verify"</option>
+            </select>
+          </label>
+          <p class="card-note" style="margin:2px 0 0;">Deleting gives a clean grounded answer. Saying so is more transparent but reads worse.</p>
+        </details>
+        <select id="router" hidden></select>
+      </div>
+    </div>
+
+    <!-- ------------------------------------------------------ results -->
+    <div id="results">
+      <div class="card"><div class="empty">Pick an example, choose a strategy, press Run.</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ====================================================== RUNS ========= -->
+<section class="panel" id="panel-runs" role="tabpanel" hidden>
+  <div class="card">
+    <h2>Runs <span class="count" id="runs-count"></span></h2>
+    <p class="card-note">Select two or more arms to compare. Every run written by <span class="mono">python -m truthforge.cli</span> shows up here.</p>
+    <div id="run-list"></div>
+  </div>
+  <div id="compare-out"></div>
+</section>
+
+<!-- ================================================== ANNOTATE ========= -->
+<section class="panel" id="panel-annotate" role="tabpanel" hidden>
+  <div class="card">
+    <h2>Correction-outcome annotation</h2>
+    <p class="card-note">
+      Blind labelling: the detector's scores and the automatic label are withheld on purpose —
+      your judgement is what validates them. Read <span class="mono">annotation/GUIDELINES.md</span> before starting.
+      Labels are written to <span class="mono">annotation/labels_&lt;run&gt;_&lt;you&gt;.csv</span>.
+    </p>
+    <div class="row-3">
+      <label class="field"><span>Run</span><select id="annot-run"></select></label>
+      <label class="field"><span>Your initials</span><input type="text" id="annot-who" placeholder="A" maxlength="8"></label>
+      <label class="field"><span>&nbsp;</span><button class="ghost" id="annot-load" style="width:100%;padding:8px;">Load batch</button></label>
+    </div>
+    <div id="annot-progress"></div>
+  </div>
+  <div id="annot-area"></div>
+</section>
+
+</main>
+
+<div class="tooltip" id="tooltip" role="status" aria-live="polite"></div>
+
+<script src="charts.js"></script>
+<script src="app.js"></script>
+</body>
+</html>

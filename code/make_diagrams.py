@@ -1,6 +1,5 @@
 """Diagrams for the Milestone 2 PDF, drawn from what the code actually does."""
 
-import shutil
 from pathlib import Path
 
 import matplotlib
@@ -138,6 +137,7 @@ arrow(ax, 11.0, 2.1, 11.0, 3.1, "re-check", dashed=True, lx=0.5, ly=0)
 ax.text(6.5, 4.35, "Retrieval (RAG) pipeline", ha="center", fontsize=11, color=INK, weight="bold")
 save(fig, "4_rag_pipeline.png")
 
-# 5. System architecture: the figure from the IMD report (same system)
-shutil.copy(HERE.parent / "paper/figs/fig_architecture.png", OUT / "5_system_architecture.png")
-print("wrote 5_system_architecture.png")
+# 5. System architecture: kept as saved in docs/diagrams/5_system_architecture.png (same system as the
+# research report); nothing to redraw here.
+if not (OUT / "5_system_architecture.png").exists():
+    print("note: docs/diagrams/5_system_architecture.png is missing")

@@ -6,7 +6,7 @@ import sys
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parents[1]
-sys.path.insert(0, str(HERE.parent / "src"))
+sys.path.insert(0, str(HERE / "code" / "truthforge" / "src"))
 
 from truthforge.correct.rewrite import REWRITE_PROMPT  # noqa: E402
 from truthforge.loop import TruthForgeLoop  # noqa: E402

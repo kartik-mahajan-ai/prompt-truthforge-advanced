@@ -1,0 +1,45 @@
+{
+  "seed": 20260920,
+  "dataset": "ragtruth",
+  "split": "test",
+  "limit": null,
+  "out_dir": "runs",
+  "run_name": "ragtruth_rule",
+  "retrieval": {
+    "top_k": 5,
+    "bm25_k": 20,
+    "dense_k": 20,
+    "rrf_k": 60,
+    "dense_model": "BAAI/bge-small-en-v1.5",
+    "reretrieve_top_k": 10
+  },
+  "generator": {
+    "model": "Qwen/Qwen2.5-3B-Instruct",
+    "dtype": "float16",
+    "load_in_4bit": false,
+    "max_new_tokens": 256,
+    "temperature": 0.0,
+    "device": "cuda"
+  },
+  "detector": {
+    "name": "minicheck",
+    "model": "lytang/MiniCheck-Flan-T5-Large",
+    "dtype": "float16",
+    "device": "cuda",
+    "batch_size": 8,
+    "flag_threshold": 0.5
+  },
+  "router": {
+    "name": "rule",
+    "accept_support_prob": 0.7,
+    "rewrite_support_prob": 0.3,
+    "thin_evidence_coverage": 0.25,
+    "uncertain_band": 0.1,
+    "contradiction_margin": 0.15
+  },
+  "loop": {
+    "max_iterations": 2,
+    "max_attempts_per_claim": 2,
+    "abstain_message": "I could not verify this from the retrieved sources."
+  }
+}

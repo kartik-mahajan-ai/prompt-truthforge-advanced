@@ -1,0 +1,11 @@
+# The core package needs NOTHING. See pyproject.toml.
+#   pip install -e .
+#
+# Add extras as you need them:
+#   pip install -e ".[dev]"      pytest, ruff
+#   pip install -e ".[models]"   torch, transformers, minicheck, sentence-transformers
+#   pip install -e ".[train]"    scikit-learn, numpy, matplotlib
+#
+# On this project's hardware (RTX 4060 Laptop, 8 GB) install torch with the
+# CUDA 12.x wheels first, then the rest:
+#   pip install torch --index-url https://download.pytorch.org/whl/cu124

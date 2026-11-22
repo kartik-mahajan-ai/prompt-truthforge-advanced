@@ -19,7 +19,7 @@ import urllib.request
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parents[1]
-REPO = HERE.parent
+REPO = HERE / "code" / "truthforge"   # this folder's copy of TruthForge
 PORT = 8431
 BASE = f"http://127.0.0.1:{PORT}"
 EDGE = r"C:\Program Files (x86)\Microsoft\Edge\Application\msedge.exe"
@@ -33,7 +33,9 @@ def post(path, body):
 
 
 def main(tests) -> int:
-    server = subprocess.Popen([sys.executable, "-m", "truthforge.ui", "--port", str(PORT)], cwd=REPO,
+    import os
+    env = dict(os.environ, PYTHONPATH=str(REPO / "src"))   # run this folder's copy, not an installed one
+    server = subprocess.Popen([sys.executable, "-m", "truthforge.ui", "--port", str(PORT)], cwd=REPO, env=env,
                               stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     try:
         for _ in range(60):
